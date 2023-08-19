@@ -1,3 +1,52 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["strict-dependencies", "unused-imports", "unused-imports"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/recommended",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          /** importの順序を設定 **/
+          {
+            "pattern": "app/types/**",
+            "group": "internal",
+            "position": "before"
+          },
+          /** 最後尾にStyleを設定 **/
+          {
+            "pattern": "./**.module.css",
+            "group": "index",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
 }
