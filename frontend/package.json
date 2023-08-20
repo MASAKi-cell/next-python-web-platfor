@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir app",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "prepare": "cd .. && husky install frontend/.husky"
   },
   "dependencies": {
     "@types/node": "20.4.9",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.3",
     "prettier": "^3.0.2"
   }
 }
