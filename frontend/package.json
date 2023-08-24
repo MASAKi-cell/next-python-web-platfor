@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint --dir app",
     "lint:fix": "next lint --fix",
-    "prepare": "cd .. && husky install frontend/.husky",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write ."
@@ -26,7 +25,6 @@
   },
   "devDependencies": {
     "eslint-plugin-unused-imports": "^3.0.0",
-    "husky": "^8.0.3",
     "prettier": "^3.0.2"
   }
 }

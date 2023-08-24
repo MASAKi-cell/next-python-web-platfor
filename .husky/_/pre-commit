@@ -1,0 +1,29 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+cd frontend
+
+echo "\n 🚧🏗️  Checking format, lint and types in your project before committing$"
+
+# Check Prettier standards
+npm run check-format ||
+(
+    echo "\n ❌🟨 Prettier Check Failed$. 🟨❌\n Run npm run format$, add changes and try commit again.\n";
+    false;
+)
+
+# Check ESLint Standards
+npm run check-lint ||
+(
+    echo "\n ❌🟪 ESLint Check Failed$. 🟪❌\n Make the required changes listed above, add changes and try to commit again.\n"
+    false;
+)
+
+npm run build ||
+(
+    echo "\n ❌🟩 Next build Failed$. 🟩❌\n View the errors above to see why.\n"
+    false;
+)
+
+# If everything passes... Now we can commit
+echo "✅✅ Build is completed... I am committing this now.$ ✅✅\n"
