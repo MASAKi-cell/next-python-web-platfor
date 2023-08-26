@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint --dir app",
     "lint:fix": "next lint --fix",
+    "lint-fix": "eslint --cache --fix app/ && prettier --write app/",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write ."

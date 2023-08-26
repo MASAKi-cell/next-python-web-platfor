@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["buildx", "callout", "VOICEVOX"]
+  "cSpell.words": ["buildx", "callout", "VOICEVOX"],
+  "files.exclude": {
+    "**/node_modules": true
+  }
 }

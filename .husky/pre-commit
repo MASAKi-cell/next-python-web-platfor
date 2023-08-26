@@ -1,12 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-cd `pwd`
 
 # frontend
-cd frontend
+cd `frontend`
 
-echo "\n 🚧🏗️  frontend: Checking format, lint in your project before committing$"
+echo "\n 🚧🏗️  Next.js: Checking format, lint in your project before committing$"
 
 # Check Prettier standards
 npm run check-format ||
