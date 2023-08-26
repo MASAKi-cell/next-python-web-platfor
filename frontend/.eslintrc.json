@@ -6,7 +6,7 @@
       "error",
       {
         "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
-        "newlines-between": "always",
+        "newlines-between": "never",
         "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": { "order": "asc", "caseInsensitive": true },
         "pathGroups": [
