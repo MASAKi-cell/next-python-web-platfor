@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["buildx", "callout", "VOICEVOX"],
+  "cSpell.words": ["buildx", "callout", "stylelint", "VOICEVOX"],
   "files.exclude": {
     "**/node_modules": true
   }

@@ -3,7 +3,7 @@
 
 
 # frontend
-cd `frontend`
+cd frontend
 
 echo "\n 🚧🏗️  Next.js: Checking format, lint in your project before committing$"
 
@@ -27,7 +27,6 @@ npm run build ||
     false;
 )
 
-# If everything passes... Now we can commit
 echo "✅✅ Build is completed... I am committing this now.$ ✅✅\n"
 
 # backend
