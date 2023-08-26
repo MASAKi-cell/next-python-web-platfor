@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint --dir app",
     "lint:fix": "next lint --fix",
-    "lint-fix": "eslint --cache --fix app/ && prettier --write app/",
+    "lint-fix": "eslint --cache --fix app/ && prettier --write app/ && stylelint 'app/**/*.{css,scss}' --fix",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write ."
@@ -22,12 +22,15 @@
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "stylelint-config-recess-order": "^4.3.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-strict-dependencies": "^1.2.1",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
