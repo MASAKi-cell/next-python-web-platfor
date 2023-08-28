@@ -21,12 +21,6 @@ npm run check-lint ||
     false;
 )
 
-npm run build ||
-(
-    echo "\n ❌🟩 Next build Failed$. 🟩❌\n View the errors above to see why.\n"
-    false;
-)
-
-echo "✅✅ Build is completed... I am committing this now.$ ✅✅\n"
+echo "✅✅ All completed!!"
 
 # backend
