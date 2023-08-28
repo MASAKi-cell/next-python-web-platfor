@@ -8,7 +8,7 @@ cd frontend
 echo "\n 🚧🏗️  Next.js: Checking format, lint in your project before committing$"
 
 # Check Prettier standards
-npm run check-format ||
+npm run format ||
 (
     echo "\n ❌🟨 Prettier Check Failed$. 🟨❌\n Run npm run format$, add changes and try commit again.\n";
     false;

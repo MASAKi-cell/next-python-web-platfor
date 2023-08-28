@@ -178,11 +178,7 @@
     inset: 0 0 auto;
     align-items: center;
     padding: 2rem 1rem 1.4rem;
-    background: linear-gradient(
-      to bottom,
-      rgb(var(--background-start-rgb) 1),
-      rgb(var(--callout-rgb) 0.5)
-    );
+    background: linear-gradient(to bottom, rgb(var(--background-start-rgb) 1), rgb(var(--callout-rgb) 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
     border: none;
