@@ -5,22 +5,14 @@
 # frontend
 cd frontend
 
-echo "\n 🚧🏗️  Next.js: Checking format, lint in your project before committing$"
+echo "\n 🚧🏗️  Next.js: Checking format, lint, stylelint in your project before committing"
 
-# Check Prettier standards
-npm run format ||
+# Check Prettier ESLint stylelint standards
+npm run lint-fix ||
 (
-    echo "\n ❌🟨 Prettier Check Failed$. 🟨❌\n Run npm run format$, add changes and try commit again.\n";
+    echo "\n ❌🟨 Check Failed$";
     false;
 )
 
-# Check ESLint Standards
-npm run check-lint ||
-(
-    echo "\n ❌🟪 ESLint Check Failed$. 🟪❌\n Make the required changes listed above, add changes and try to commit again.\n"
-    false;
-)
-
-echo "✅✅ All completed!!"
 
 # backend
