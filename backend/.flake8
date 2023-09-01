@@ -1,0 +1,2 @@
+exclude = venv/*
+max-line-length = 100
