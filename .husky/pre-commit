@@ -16,3 +16,7 @@ npm run lint-fix ||
 
 
 # backend
+cd ../
+cd backend
+
+flake8
