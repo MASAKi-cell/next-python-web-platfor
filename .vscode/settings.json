@@ -1,7 +1,8 @@
 {
   "cSpell.words": ["buildx", "callout", "stylelint", "vercel", "VOICEVOX"],
   "files.exclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/venv": true
   },
   "editor.formatOnType": true,
   "editor.defaultFormatter": "ms-python.black-formatter",
