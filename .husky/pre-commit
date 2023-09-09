@@ -5,7 +5,7 @@
 # frontend
 cd frontend
 
-echo "\n 🚧🏗️  Next.js: Checking format, lint, stylelint in your project before committing"
+echo "\n 🚧🏗️  frontend: Checking format, lint, stylelint in your project before committing"
 
 # Check Prettier ESLint stylelint standards
 npm run lint-fix ||
@@ -18,5 +18,7 @@ npm run lint-fix ||
 # backend
 cd ../
 cd backend
+
+echo "\n 🚧🏗️  backend: Checking format, lint, stylelint in your project before committing"
 
 flake8

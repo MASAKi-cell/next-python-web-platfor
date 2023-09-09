@@ -2,5 +2,10 @@
   "cSpell.words": ["buildx", "callout", "stylelint", "vercel", "VOICEVOX"],
   "files.exclude": {
     "**/node_modules": true
+  },
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
   }
 }
