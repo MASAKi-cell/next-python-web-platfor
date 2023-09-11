@@ -2,4 +2,4 @@
 
 # パッケージインストール時にrequirements.txtを自動更新する
 pip install "$@"
-pip freeze > requirements.txt 
+pip freeze > requirements.txt

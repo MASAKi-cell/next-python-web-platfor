@@ -1,3 +1,6 @@
 /node_modules
 package-lock.json
 venv
+
+# VSCode settings and configuration
+.vscode
