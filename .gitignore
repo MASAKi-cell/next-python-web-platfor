@@ -4,3 +4,6 @@ venv
 
 # VSCode settings and configuration
 .vscode
+
+# env
+.env

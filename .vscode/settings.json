@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["buildx", "callout", "stylelint", "vercel", "VOICEVOX"],
+  "cSpell.words": [
+    "buildx",
+    "callout",
+    "openai",
+    "stylelint",
+    "vercel",
+    "VOICEVOX"
+  ],
   "files.exclude": {
     "**/node_modules": true,
     "**/venv": true
