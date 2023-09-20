@@ -2,6 +2,7 @@
   "cSpell.words": [
     "buildx",
     "callout",
+    "dotenv",
     "openai",
     "stylelint",
     "vercel",
@@ -9,7 +10,8 @@
   ],
   "files.exclude": {
     "**/node_modules": true,
-    "**/venv": true
+    "**/venv": true,
+    "**/.next": true,
   },
   "editor.formatOnType": true,
   "editor.defaultFormatter": "ms-python.black-formatter",
