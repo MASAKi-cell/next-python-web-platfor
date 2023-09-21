@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-recess-order", "stylelint-config-standard"],
+  "extends": ["stylelint-config-recess-order", "stylelint-config-standard","stylelint-config-prettier"],
   "customSyntax": "postcss-scss",
   "overrides": [
     {
@@ -8,9 +8,11 @@
     }
   ],
   "rules": {
-    "at-rule-no-unknown": null,
-    "function-no-unknown": null,
-    "no-duplicate-selectors": null,
+    "string-no-newline": true,
+    "property-no-unknown": true,
+    "declaration-block-no-duplicate-properties": true,
+    "block-no-empty": true,
+    "no-duplicate-selectors": true,
     "declaration-empty-line-before": "never"
   }
 }
