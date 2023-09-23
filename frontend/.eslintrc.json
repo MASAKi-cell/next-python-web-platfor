@@ -1,7 +1,28 @@
 {
-  "plugins": ["strict-dependencies", "unused-imports", "unused-imports"],
-  "extends": ["next/core-web-vitals", "plugin:import/recommended", "plugin:import/warnings", "prettier"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["unused-imports"],
+  "extends": ["next/core-web-vitals", "airbnb-typescript", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "no-unused-vars": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "import/order": [
       "error",
       {
@@ -23,17 +44,6 @@
             "position": "before"
           }
         ]
-      }
-    ],
-    "no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
       }
     ]
   }
