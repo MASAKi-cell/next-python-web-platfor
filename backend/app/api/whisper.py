@@ -1,11 +1,5 @@
 from os.path import join
 import openai
-
-import sys
-from os.path import dirname, abspath
-
-# sys.pathに追加
-sys.path.append(dirname(dirname(abspath(__file__))))
 from config import openai_api_key
 
 
