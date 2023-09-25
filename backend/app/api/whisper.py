@@ -2,16 +2,27 @@ from os.path import join
 import openai
 from config import openai_api_key
 
+tmpPath = "/Users/takahashi_masaki/Desktop/Whisper-chatGTP-Api/backend/s.wav"
+
 
 # 音声をWhisper APIで文字に変換する関数
 def voice_to_text() -> str:
-    openai.api_key = openai_api_key  # Api Keyのセット
-    dotenv_path = join(
-        "/Users/takahashi_masaki/Desktop/Whisper-chatGTP-Api/backend/asano.wav"
-    )
-    audio_file = open(dotenv_path, "rb")
-    transcript = openai.Audio.transcribe("whisper-1", audio_file)
-    return transcript["text"]
+    try:
+        openai.api_key = openai_api_key  # Api Keyのセット
+        dotenv_path = join(tmpPath)
+        audio_file = open(dotenv_path, "rb")
+        transcript = openai.Audio.transcribe("whisper-1", audio_file)
+        return transcript["text"]
+    except openai.error.OpenaiError:
+        return "Error in processing the audio"
 
 
-voice_to_text()
+# chat-gtpによる返答文の生成
+def think_response(text_message: str) -> str:
+    try:
+        chat_response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo", messages=text_message
+        )
+        return chat_response["choices"][0]["message"]["content"]
+    except openai.error.OpenaiError:
+        return "Error in processing the chat-gtp"
