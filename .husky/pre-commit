@@ -21,4 +21,6 @@ cd backend
 
 echo "\n 🚧🏗️  backend: Checking format, lint, stylelint in your project before committing"
 
-flake8
+flake8 # リンター
+black app # コードフォーマッター
+mypy app # 型チェック
