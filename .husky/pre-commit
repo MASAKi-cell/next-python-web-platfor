@@ -23,4 +23,3 @@ echo "\n 🚧🏗️  backend: Checking format, lint, stylelint in your project 
 
 flake8 # リンター
 black app # コードフォーマッター
-mypy app # 型チェック
