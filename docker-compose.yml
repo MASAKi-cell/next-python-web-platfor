@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: "1.1"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
