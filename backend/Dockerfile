@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM Python:3.10.12
+FROM python:3.10.12
 WORKDIR /app
 
 # コンソール出力
