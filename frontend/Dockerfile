@@ -13,4 +13,4 @@ COPY . .
 RUN npm run build
 
 # コンテナ起動時の実行コマンド
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
