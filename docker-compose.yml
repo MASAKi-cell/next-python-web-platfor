@@ -10,11 +10,13 @@ services:
     volumes:
       - .:/frontend/app
       - node_modules:/app/node_modules
+    tty: true
 
   backend:
     build:
       context: ./backend
     ports:
       - "8000:8000"
+    tty: true
 volumes:
   node_modules:
