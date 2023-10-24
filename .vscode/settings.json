@@ -4,8 +4,10 @@
     "buildx",
     "callout",
     "dotenv",
+    "masaki",
     "openai",
     "stylelint",
+    "takahashi",
     "vercel",
     "VOICEVOX"
   ],
