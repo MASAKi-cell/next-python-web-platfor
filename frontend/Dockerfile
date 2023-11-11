@@ -3,6 +3,7 @@
 # # base image
 FROM node:20.9.0-bookworm-slim as base
 WORKDIR /src
+RUN chown -R node:node /app && chmod -R 770 /app
 
 # development for local
 COPY package*.json ./
