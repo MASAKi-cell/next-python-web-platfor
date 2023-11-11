@@ -1,16 +1,19 @@
 # syntax=docker/dockerfile:1
-FROM node:16.14.2
-WORKDIR /app
 
-# 依存関係のインストール
+# # base image
+FROM node:20.9.0-bookworm-slim as base
+WORKDIR /src
+
+# development for local
 COPY package*.json ./
 RUN npm install
-
-# ソースコードのコピー
 COPY . .
-
-# アプリケーションのビルド
 RUN npm run build
+CMD ["npm", "run", "dev"]
 
-# コンテナ起動時の実行コマンド
-CMD ["npm", "dev"]
+# build
+FROM base AS builder
+COPY --chown=node:node . .
+USER node
+RUN npm install --loglevel warn
+RUN npm run build

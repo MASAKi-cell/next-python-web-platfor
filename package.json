@@ -5,5 +5,8 @@
   },
   "scripts": {
     "prepare": "husky install"
+  },
+  "volta": {
+    "node": "20.9.0"
   }
 }
