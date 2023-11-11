@@ -1,0 +1,16 @@
+# packages
+**/node_modules/
+
+# git
+**/.git
+**/.gitignore
+
+# readme
+**/README.md
+
+# build
+**/dist
+**/build
+
+# secrets
+**/.env
