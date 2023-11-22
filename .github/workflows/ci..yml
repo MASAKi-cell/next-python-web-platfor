@@ -10,12 +10,12 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [16]
+        os: [ubuntu-latest] # ビルド環境
+        node: [20]
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # リポジトリのコードをチェックアウト
 
       - name: Setup node env 🏗
         uses: actions/setup-node@v3
@@ -33,3 +33,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-build-
+
+      - name: Build Docker Compose
+        run: docker-compose up --build -d # Docker Composeでアプリケーションをビルド・実行
