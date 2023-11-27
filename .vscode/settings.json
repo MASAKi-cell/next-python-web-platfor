@@ -29,5 +29,5 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true
   },
-  "python.analysis.extraPaths": ["./backend/app/api"]
+  "python.analysis.extraPaths": ["./backend/app/api", "./backend/app/utils"]
 }
