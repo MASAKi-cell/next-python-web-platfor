@@ -27,6 +27,7 @@ requests==2.31.0
 tomli==2.0.1
 tqdm==4.66.1
 types-Flask-Cors==4.0.0.1
+types-requests==2.31.0.10
 typing_extensions==4.8.0
 urllib3==2.0.4
 Werkzeug==3.0.1
