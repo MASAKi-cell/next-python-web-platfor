@@ -6,6 +6,7 @@
     "dotenv",
     "masaki",
     "openai",
+    "pyaudio",
     "stylelint",
     "takahashi",
     "vercel",

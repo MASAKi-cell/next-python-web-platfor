@@ -1,7 +1,11 @@
+from time import sleep
 import json
 import requests
 from config import voicevox_path
 from utils.exceptions import ExceptionsError, HttpCode
+import pyaudio
+import wave
+import io
 
 speaker = "speaker"
 one = 1
@@ -57,11 +61,31 @@ def post_synthesis(audio_query_res: str) -> bytes | None:
     return None
 
 
+def play_wav(wav_file: bytes | None):
+    if wav_file is not None:
+        wr: wave.Wave_read = wave.open(io.BytesIO(wav_file))
+    p = pyaudio.PyAudio()
+    stream = p.open(
+        format=p.get_format_from_width(wr.getsampwidth()),
+        channels=wr.getnchannels(),
+        rate=wr.getframerate(),
+        output=True,
+    )
+    chunk = 1024
+    data = wr.readframes(chunk)
+    while data:
+        stream.write(data)
+        data = wr.readframes(chunk)
+    sleep(0.5)
+    stream.close()
+    p.terminate()
+
+
 def text_to_voice(text: str):
     res = post_audio(text)
     if res is not None:
         synthesis = post_synthesis(res)
-        print(synthesis)
+        play_wav(synthesis)
 
 
 text_to_voice("こんにちは")
