@@ -1,7 +1,7 @@
 import json
 import requests
 from config import voicevox_path
-from exceptions import ExceptionsError, HttpCode
+from utils.exceptions import ExceptionsError, HttpCode
 
 speaker = "speaker"
 one = 1
@@ -61,6 +61,7 @@ def text_to_voice(text: str):
     res = post_audio(text)
     if res is not None:
         synthesis = post_synthesis(res)
+        print(synthesis)
 
 
 text_to_voice("こんにちは")

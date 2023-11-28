@@ -1,8 +1,8 @@
 import logging
 from flask import Flask, request
 from flask_cors import CORS
-from config import local_pass
 from response import voice_to_text
+from config import local_pass
 
 app = Flask(__name__)
 CORS(app, resources={r"frontend/app/*": {"origins": local_pass}})  # オリジンの設定
