@@ -1,7 +1,8 @@
 import logging
 from flask import Flask, request
 from flask_cors import CORS
-from config import local_pass
+from utils.exceptions import HttpCode
+from local_config import local_pass
 from api.response import voice_to_text
 from api.voicevox import text_to_voice
 
@@ -14,8 +15,12 @@ logging.getLogger("flask_cors").level = logging.DEBUG  # ログの有効化
 def upload_audio():
     # 音声合成処理
     audio_file = request.files["audio"]
-    chatGtpRes = voice_to_text(audio_file)
-    text_to_voice(chatGtpRes)
+    if audio_file:
+        chatGtpRes = voice_to_text(audio_file)
+        text_to_voice(chatGtpRes)
+        return {"success": "text to voice"}, HttpCode.OK
+    else:
+        return {"error": "No audio file provided"}, HttpCode.BAD_REQUEST
 
 
 if __name__ == "__main__":
