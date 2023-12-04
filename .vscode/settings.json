@@ -5,6 +5,7 @@
     "callout",
     "dotenv",
     "masaki",
+    "ondataavailable",
     "openai",
     "pyaudio",
     "stylelint",
