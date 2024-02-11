@@ -2,13 +2,5 @@
 
 <br>
 
-マイク入力を Whisper API で文字起こしし、音声から起こした文字を ChatGPT API に投げて返答を VOICEVOX に渡すことによって ChatGPT との会話を行う。
-
-<br>
-
-1. マイクからの音声入力を取得。
-2. Whisper API を使用して音声からテキストに変換。
-3. ChatGPT API にそのテキストを送信して返答を得る。
-4. VOICEVOX を使用して、その返答を音声に変換。
-
+This repository set up eslint, prettier and stylelintrc in the frontend/ directory, and Python lint tools (flake8 and black) in the backend/ directory. We also included integration with GitHub Actions.
 <br>
