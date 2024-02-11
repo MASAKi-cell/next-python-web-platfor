@@ -1,6 +1,19 @@
-# Whisper-chatGTP-Api
+# next-python-web-platfor
+
+The repository employed Next.js and Python for the backend to build the website environment.
+In the `frontend/` directory, place the Next.js project and the associated eslint, prettier and stylelintrc configurations. In the `backend/` directory, we will put the Python code and Python lint tools (flake8 and black). husky will be placed in the root directory and configured to run both frontend and backend lint. Configure GitHub Actions to automatically run CI/CD tasks. We also built a Docker environment.
+
 
 <br>
 
-This repository set up eslint, prettier and stylelintrc in the frontend/ directory, and Python lint tools (flake8 and black) in the backend/ directory. We also included integration with GitHub Actions.
+## Usage
+
+
 <br>
+
+## Article
+
+
+<br>
+
+## Instration
