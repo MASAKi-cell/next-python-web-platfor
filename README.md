@@ -7,14 +7,14 @@ In the `frontend/` directory, place the Next.js project and the associated eslin
 
 <br><br>
 
-## Article
+## 関連記事
 
 1. [Next.jsとPythonの開発環境を爆速で構築する](https://zenn.dev/arsaga/articles/0fdee431a8374a) <br>
 2. [AIと音声会話する Python × Whisper API × ChatGPT API × VOICEVOX 〜バックエンド編〜](https://zenn.dev/arsaga/articles/d07358c709bc73)
 
 <br><br>
 
-## Installation
+## セットアップ
 
 #### frontend
 
